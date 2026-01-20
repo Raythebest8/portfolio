@@ -1,0 +1,312 @@
+/* --- SECTION CONTACT --- */
+.contact-section {
+  padding: 100px 10%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+}
+
+#contact {
+  color: #fff;
+  margin-top: 50px;
+}
+
+/* --- INFOS (GAUCHE) --- */
+.contact-titles {
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+  margin-top: 30px;
+  letter-spacing: -2px;
+}
+.contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  /* font-weight: 800; */
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+}
+
+.contact-title span {
+  display: block;
+  color: #007bff; /* Ta couleur primaire */
+  text-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+}
+/* Fond de la page CV */
+.cv-page {
+  background: #f4f7f6; /* Un gris très clair pour faire ressortir le papier blanc */
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* On force la feuille à être blanche et centrée */
+.cv-paper {
+  background: white;
+  width: 210mm; /* Largeur A4 */
+  min-height: 297mm; /* Hauteur A4 */
+  margin: 0 auto;
+  padding: 20mm;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+/* Cache les éléments inutiles lors de l'impression */
+@media print {
+  .cv-page {
+    background: white;
+    padding: 0;
+  }
+  .cv-download-header, .navbar {
+    display: none !important;
+  }
+  .cv-paper {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile : on rend la feuille responsive pour qu'elle ne dépasse pas */
+@media (max-width: 850px) {
+  .cv-paper {
+    width: 100%;
+    padding: 15px;
+  }
+  .cv-content {
+    display: block; /* On empile les colonnes sur mobile */
+  }
+}
+.contact-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 400px;
+}
+
+.direct-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item small {
+  color: #007bff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+}
+
+.contact-item p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* --- FORMULAIRE (DROITE) --- */
+.contact-form-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 50px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Barre d'accentuation animée */
+.input-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  transition: 0.4s ease;
+}
+
+.input-group:focus-within::after {
+  width: 100%;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  border-bottom-color: transparent;
+}
+
+/* --- BOUTON --- */
+.submit-btn {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border: none;
+  border-radius: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+  background: #007bff;
+  color: #fff;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- SPINNER --- */
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- MESSAGES STATUT --- */
+.msg-success { color: #4ade80; margin-top: 20px; font-weight: 600; text-align: center; }
+.msg-error { color: #f87171; margin-top: 20px; font-weight: 600; text-align: center; }
+
+/* --- RESPONSIVE --- */
+
+
+/* 1. GRANDS ÉCRANS (Laptops & Desktops) */
+@media (min-width: 1400px) {
+  .contact-section {
+    padding: 100px 15%; /* On donne plus d'air sur les très grands écrans */
+  }
+}
+
+/* 2. TABLETTES (Moins de 1024px) */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 80px 5%;
+  }
+
+  .contact-container {
+    gap: 40px;
+    grid-template-columns: 1fr; /* On empile déjà pour éviter l'écrasement */
+  }
+
+  .contact-titles {
+    text-align: left; /* Alignement plus naturel en mode colonne */
+  }
+
+  .contact-desc {
+    max-width: 100%;
+  }
+}
+
+/* 3. MOBILES (Moins de 768px) */
+@media (max-width: 768px) {
+  /* Section Contact */
+  .contact-title {
+    font-size: 2.5rem; /* Réduction de la taille pour éviter les coupures de mots */
+  }
+
+  .contact-form-box {
+    padding: 30px 20px;
+    border-radius: 25px; /* Arrondi moins prononcé sur petit écran */
+  }
+
+  .submit-btn {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Section CV spécifique */
+  .cv-paper {
+    padding: 10mm; /* Réduction des marges internes du papier */
+    min-height: auto; /* On laisse le papier grandir selon le contenu */
+  }
+
+  .cv-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .header-contact p {
+    text-align: center !important;
+  }
+
+  /* Ajustement des cercles de progression si présents */
+  .progress-container {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* 4. PETITS MOBILES (Moins de 480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 50px 15px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-item p {
+    font-size: 0.95rem; /* Texte plus lisible sur petit écran */
+  }
+
+  .input-group {
+    margin-bottom: 25px; /* On resserre le formulaire */
+  }
+
+  /* On s'assure que le papier CV ne crée pas de scroll horizontal */
+  .cv-page {
+    padding: 10px 5px;
+  }
+}
+
+/* --- OPTIMISATION DU PAPIER CV POUR L'IMPRESSION --- */
+/* Pour s'assurer que le navigateur n'ajoute pas de marges blanches forcées */
+@page {
+  size: A4;
+  margin: 0;
+}

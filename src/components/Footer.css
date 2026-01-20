@@ -1,0 +1,71 @@
+.dashboard-footer-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d1117; /* Fond sombre Dashboard */
+  border-top: 1px solid #30363d;
+  padding: 8px 20px;
+  font-family: 'JetBrains Mono', 'Menlo', monospace; /* Police typée code */
+  color: #8b949e;
+  font-size: 0.75rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Badge de statut */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c9d1d9;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #238636;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #238636;
+}
+
+/* Séparateur vertical type VS Code */
+.footer-separator {
+  width: 1px;
+  height: 14px;
+  background: #30363d;
+}
+
+/* Liens sociaux */
+.social-links-mini {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links-mini a {
+  color: #8b949e;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.social-links-mini a:hover {
+  color: #58a6ff;
+}
+
+/* --- RESPONSIVITÉ --- */
+@media (max-width: 600px) {
+  .tech-stack-info, .footer-separator {
+    display: none; /* On cache le surplus sur mobile pour garder une seule ligne */
+  }
+  
+  .dashboard-footer-line {
+    padding: 8px 15px;
+  }
+}

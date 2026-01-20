@@ -1,0 +1,175 @@
+/* --- CENTRAGE DANS LE BODY --- */
+.cv-page {
+  padding: 40px 20px;
+  background: #0b1121;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- BOUTONS --- */
+.cv-download-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 850px;
+  justify-content: center;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+.print-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.print-btn:hover { background: #0056b3; transform: translateY(-2px); }
+
+/* --- PAPIER CV --- */
+.cv-paper {
+  background: white;
+  color: #2c3e50;
+  max-width: 850px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER --- */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.cv-header h1 { font-size: 2.2rem; margin: 0; color: #1a202c; }
+.cv-header h1 span { color: #007bff; }
+.job-title { font-size: 1.1rem; color: #007bff; font-weight: 600; margin-top: 5px; }
+.job-description { font-size: 0.9rem; color: #718096; max-width: 450px; margin-top: 10px; line-height: 1.4; }
+
+.header-contact p { margin: 5px 0; font-size: 0.85rem; color: #4a5568; text-align: right; }
+
+/* --- CONTENU --- */
+.cv-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.section-title {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #2d3748;
+  letter-spacing: 1px;
+}
+
+.sidebar-section { margin-bottom: 25px; }
+.sidebar-section p, .sidebar-section li { font-size: 0.85rem; color: #4a5568; margin: 5px 0; }
+.cv-sidebar ul { padding-left: 15px; }
+.exp-item h4 {
+  font-size: 1.05rem; /* Taille légèrement réduite pour le confort de lecture */
+  margin-bottom: 2px;
+}
+
+.exp-item p {
+  margin-top: 5px;
+  line-height: 1.4; /* Interligne serré pour gagner de l'espace */
+}
+.exp-item, .edu-item { margin-bottom: 20px; }
+.exp-item h4, .edu-item h4 { margin: 0; color: #1a202c; font-size: 1.05rem; }
+.date, .date-edu { font-size: 0.8rem; color: #007bff; font-weight: bold; }
+.exp-item p, .edu-item p { font-size: 0.9rem; color: #4a5568; line-height: 1.5; margin-top: 5px; }
+
+/* --- IMPRESSION --- */
+/* --- STYLE POUR L'IMPRESSION (MISE EN PAGE FIGÉE) --- */
+@media print {
+  /* 1. On empêche le navigateur de tout remettre en colonne */
+  .cv-content {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important; /* On force le 1/3 - 2/3 */
+    gap: 40px !important;
+  }
+
+  .cv-header {
+    display: flex !important;
+    flex-direction: row !important; /* On force l'alignement horizontal du nom et contact */
+    justify-content: space-between !important;
+  }
+
+  /* 2. On retire les marges de la page web pour utiliser toute la feuille */
+  .cv-page {
+    padding: 0 !important;
+    background: white !important;
+    display: block !important; /* On libère le centrage flex pour laisser le document couler normalement */
+  }
+
+  .cv-paper {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* 3. On évite que des blocs soient coupés en deux sur deux pages */
+  .exp-item, .edu-item, .sidebar-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* 4. On cache les éléments inutiles */
+  .cv-download-header, .navbar, .back-btn, .print-btn {
+    display: none !important;
+  }
+
+  /* 5. Forcer les couleurs (important pour les bordures bleues et textes gris) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-content { grid-template-columns: 1fr; }
+  .cv-header { flex-direction: column; }
+  .header-contact p { text-align: left; margin-top: 15px; }
+}
+
+.edu-item {
+  margin-bottom: 25px; /* Plus d'espace entre les diplômes */
+  border-left: 3px solid #eee; /* Une petite barre discrète à gauche */
+  padding-left: 15px;
+}
+
+.edu-item:hover {
+  border-left-color: #007bff; /* La barre devient bleue au survol */
+}

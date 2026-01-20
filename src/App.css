@@ -1,0 +1,484 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Défilement fluide pour tout le site */
+html {
+  scroll-behavior: smooth;
+}/* --- SECTION GLOBALE --- */
+.about-section {
+  padding: 120px 10%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.about-main-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* --- VISUEL (GAUCHE) --- */
+.about-visual-box {
+  flex: 1;
+  position: relative;
+}
+
+.about-image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.about-profile-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary-blue);
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  background: var(--primary-blue);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+}
+
+.about-badge-number { display: block; font-size: 1.8rem; font-weight: 800; }
+.about-badge-text { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; }
+
+/* --- CONTENU (DROITE) --- */
+.about-text-content {
+  flex: 1.5;
+}
+
+.about-subtitle-text {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.about-main-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--text-color);
+  margin: 10px 0 30px;
+}
+
+.about-main-title span {
+  color: var(--primary-blue);
+}
+
+.about-main-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+/* --- GRID ET CARTES --- */
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.about-glass-effect {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+.about-info-card {
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.about-info-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+}
+
+.about-card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.about-info-card h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.about-info-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* --- CITATION --- */
+.about-quote-box {
+  padding: 20px 25px;
+  border-left: 4px solid var(--primary-blue);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px) {
+  .about-main-container {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .about-visual-box { width: 100%; display: flex; justify-content: center; }
+  .about-image-wrapper::before { display: none; } /* On simplifie sur mobile */
+  
+  .about-cards-grid { width: 100%; }
+  
+  .about-quote-box {
+    border-left: none;
+    border-top: 4px solid var(--primary-blue);
+  }
+}
+
+
+/* competences */
+.skills-section {
+  padding: 100px 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-subtitle {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.skills-main-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.skills-main-title span { color: var(--primary-blue); }
+
+.skills-container {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skills-column {
+  flex: 1;
+}
+
+.skills-column-title {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/* --- HARD SKILLS GRID --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.skills-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.skill-card {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card span {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-blue);
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.skill-card:hover img { transform: scale(1.1); }
+
+/* --- SOFT SKILLS LIST --- */
+.soft-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.soft-skill-item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.soft-icon {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.soft-text h4 {
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.soft-text p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.soft-skill-item:hover {
+  border-color: var(--primary-blue);
+  padding-left: 30px; /* Petit effet de glissement au survol */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 950px) {
+  .skills-container {
+    flex-direction: column;
+  }
+  
+  .skills-section {
+    padding: 80px 5%;
+  }
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+}
+
+/* --- HARD SKILLS --- */
+.hard-skills-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.skill-item {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.progress-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Démarre en haut */
+}
+
+/* Cercle de fond gris */
+.progress-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 6;
+}
+
+/* Barre de progression invisible par défaut */
+.progress-bar {
+  fill: none;
+  stroke: var(--primary-blue);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 283; /* Périmètre : 2 * π * 45 */
+  stroke-dashoffset: 283; /* Masqué au début */
+  transition: stroke-dashoffset 1s ease-out, filter 0.3s;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.skill-percent {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s;
+  color: var(--primary-blue);
+  bottom: 15px;
+}
+
+/* --- EFFET AU HOVER --- */
+.skill-item:hover .progress-bar {
+  filter: drop-shadow(0 0 5px var(--primary-blue));
+}
+
+/* Valeurs de progression (à ajuster selon ton niveau) */
+.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; } /* 95% */
+.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }  /* 90% */
+.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }   /* 85% */
+
+.skill-item:hover img { transform: translateY(-5px); }
+.skill-item:hover .skill-percent { opacity: 1; }
+
+/* --- SOFT SKILLS --- */
+.soft-skills-box {
+  background: var(--glass-bg);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  min-width: 300px;
+}
+
+.soft-title { color: var(--text-color); margin-bottom: 20px; font-size: 1.5rem; }
+
+.soft-list { list-style: none; padding: 0; }
+
+.soft-list li {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary-blue);
+}
+/* Ajoutez ces classes spécifiques à votre CSS existant */
+
+/* HTML - 95% */
+.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; } 
+
+/* CSS - 90% */
+.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }  
+
+/* JS - 85% */
+.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }   
+
+/* React - 80% */
+.skill-item:hover .progress-bar.react { stroke-dashoffset: 56; } 
+
+/* Laravel - 75% */
+.skill-item:hover .progress-bar.laravel { stroke-dashoffset: 70; } 
+
+/* WordPress - 90% */
+.skill-item:hover .progress-bar.wordpress { stroke-dashoffset: 28; } 
+
+/* PHP - 80% */
+.skill-item:hover .progress-bar.php { stroke-dashoffset: 56; } 
+
+/* MySQL - 85% */
+.skill-item:hover .progress-bar.mysql { stroke-dashoffset: 42; }
+
+/* Responsive : ajuster la grille pour plus d'icônes */
+.hard-skills-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 icônes par ligne sur desktop */
+  gap: 30px;
+  flex: 2;
+}
+
+@media (max-width: 1200px) {
+  .hard-skills-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hard-skills-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
