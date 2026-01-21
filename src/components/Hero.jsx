@@ -1,5 +1,6 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs, FaLaravel } from 'react-icons/fa';
 import './Hero.css';
 
@@ -33,8 +34,7 @@ const Hero = () => {
 
         <div className="hero-btns">
           <a href="#projet" className="btn-primary">Voir mes projets</a>
-          <a href="/CV" className="btn-secondary">Voir mon CV</a>
-        </div>
+          <Link to="/CV" className="btn-secondary">Voir mon CV</Link>        </div>
       </div>
 
       <div className="hero-image">
@@ -60,9 +60,9 @@ const Hero = () => {
         </div>
 
         {/* L'image qui s'adapte aux deux styles */}
-        <img 
-          src="./assets/images/one-piece-anime-japanese-skull-hat-straw-hat-pirate-luffy-st.webp" 
-          alt="RayDev Profile" 
+        <img
+          src="./assets/images/one-piece-anime-japanese-skull-hat-straw-hat-pirate-luffy-st.webp"
+          alt="RayDev Profile"
           className="main-profile-img"
         />
       </div>
