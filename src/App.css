@@ -24,7 +24,7 @@ html {
   display: flex;
   align-items: center;
   gap: 80px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -177,7 +177,10 @@ html {
 }
 
 
-/* competences */
+/* ==========================================================================
+   SECTION COMPÉTENCES (SKILLS)
+   ========================================================================== */
+
 .skills-section {
   padding: 100px 10%;
   min-height: 100vh;
@@ -206,138 +209,29 @@ html {
 
 .skills-main-title span { color: var(--primary-blue); }
 
-.skills-container {
-  display: flex;
-  gap: 50px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.skills-column {
-  flex: 1;
-}
-
-.skills-column-title {
-  color: var(--text-color);
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  text-align: center;
-  position: relative;
-}
-
-/* --- HARD SKILLS GRID --- */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-}
-
-.skills-glass {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.skill-card {
-  padding: 25px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.skill-card img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s ease;
-}
-
-.skill-card span {
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary-blue);
-  background: rgba(0, 123, 255, 0.05);
-}
-
-.skill-card:hover img { transform: scale(1.1); }
-
-/* --- SOFT SKILLS LIST --- */
-.soft-skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.soft-skill-item {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.soft-icon {
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-}
-
-.soft-text h4 {
-  color: var(--text-color);
-  margin-bottom: 5px;
-}
-
-.soft-text p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
-}
-
-.soft-skill-item:hover {
-  border-color: var(--primary-blue);
-  padding-left: 30px; /* Petit effet de glissement au survol */
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 950px) {
-  .skills-container {
-    flex-direction: column;
-  }
-  
-  .skills-section {
-    padding: 80px 5%;
-  }
-}
-
 .skills-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 50px;
   width: 100%;
 }
 
-/* --- HARD SKILLS --- */
+/* --- HARD SKILLS (Grille Circulaire) --- */
 .hard-skills-box {
+  flex: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
 .skill-item {
   text-align: center;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
 }
 
 .progress-container {
@@ -347,7 +241,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .progress-svg {
@@ -356,119 +250,110 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg); /* Démarre en haut */
+  transform: rotate(-90deg);
 }
 
-/* Cercle de fond gris */
 .progress-bg {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.1);
+  stroke: rgba(255, 255, 255, 0.05);
   stroke-width: 6;
 }
 
-/* Barre de progression invisible par défaut */
 .progress-bar {
   fill: none;
   stroke: var(--primary-blue);
   stroke-width: 6;
   stroke-linecap: round;
   stroke-dasharray: 283; /* Périmètre : 2 * π * 45 */
-  stroke-dashoffset: 283; /* Masqué au début */
-  transition: stroke-dashoffset 1s ease-out, filter 0.3s;
+  stroke-dashoffset: 283; /* Masqué par défaut */
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-item img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   z-index: 2;
   transition: 0.3s;
+  filter: grayscale(20%);
 }
 
 .skill-percent {
   position: absolute;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
+  color: var(--primary-blue);
+  bottom: 12px;
   opacity: 0;
   transition: 0.3s;
-  color: var(--primary-blue);
-  bottom: 15px;
 }
 
-/* --- EFFET AU HOVER --- */
-.skill-item:hover .progress-bar {
-  filter: drop-shadow(0 0 5px var(--primary-blue));
-}
+/* --- ANIMATIONS DE PROGRESSION AU SURVOL --- */
+.skill-item:hover .progress-bar { filter: drop-shadow(0 0 8px var(--primary-blue)); }
+.skill-item:hover img { transform: scale(1.1) translateY(-5px); filter: grayscale(0%); }
+.skill-item:hover .skill-percent { opacity: 1; bottom: 18px; }
 
-/* Valeurs de progression (à ajuster selon ton niveau) */
-.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; } /* 95% */
-.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }  /* 90% */
-.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }   /* 85% */
+/* Valeurs de progression */
+.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; }   /* 95% */
+.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }    /* 90% */
+.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }     /* 85% */
+.skill-item:hover .progress-bar.react { stroke-dashoffset: 56; }  /* 80% */
+.skill-item:hover .progress-bar.laravel { stroke-dashoffset: 70; }/* 75% */
+.skill-item:hover .progress-bar.wordpress { stroke-dashoffset: 28; }
+.skill-item:hover .progress-bar.php { stroke-dashoffset: 56; }
+.skill-item:hover .progress-bar.mysql { stroke-dashoffset: 42; }
 
-.skill-item:hover img { transform: translateY(-5px); }
-.skill-item:hover .skill-percent { opacity: 1; }
-
-/* --- SOFT SKILLS --- */
+/* --- SOFT SKILLS (Box Glassmorphism) --- */
 .soft-skills-box {
+  flex: 1;
   background: var(--glass-bg);
-  padding: 40px;
+  padding: 40px 30px;
   border-radius: 30px;
   border: 1px solid var(--glass-border);
-  min-width: 300px;
+  backdrop-filter: blur(10px);
+  min-width: 320px;
 }
 
-.soft-title { color: var(--text-color); margin-bottom: 20px; font-size: 1.5rem; }
+.soft-title {
+  color: var(--text-color);
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  text-align: center;
+}
 
-.soft-list { list-style: none; padding: 0; }
+.soft-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .soft-list li {
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  transition: 0.3s;
 }
 
 .bullet {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: var(--primary-blue);
   border-radius: 50%;
   box-shadow: 0 0 10px var(--primary-blue);
+  flex-shrink: 0;
 }
-/* Ajoutez ces classes spécifiques à votre CSS existant */
 
-/* HTML - 95% */
-.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; } 
-
-/* CSS - 90% */
-.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }  
-
-/* JS - 85% */
-.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }   
-
-/* React - 80% */
-.skill-item:hover .progress-bar.react { stroke-dashoffset: 56; } 
-
-/* Laravel - 75% */
-.skill-item:hover .progress-bar.laravel { stroke-dashoffset: 70; } 
-
-/* WordPress - 90% */
-.skill-item:hover .progress-bar.wordpress { stroke-dashoffset: 28; } 
-
-/* PHP - 80% */
-.skill-item:hover .progress-bar.php { stroke-dashoffset: 56; } 
-
-/* MySQL - 85% */
-.skill-item:hover .progress-bar.mysql { stroke-dashoffset: 42; }
-
-/* Responsive : ajuster la grille pour plus d'icônes */
-.hard-skills-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 icônes par ligne sur desktop */
-  gap: 30px;
-  flex: 2;
+.soft-list li:hover {
+  transform: translateX(10px);
+  color: #fff;
 }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 
 @media (max-width: 1200px) {
   .hard-skills-box {
@@ -476,9 +361,41 @@ html {
   }
 }
 
+@media (max-width: 950px) {
+  .skills-section {
+    padding: 80px 5%;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hard-skills-box {
+    width: 100%;
+    gap: 20px;
+   
+  }
+
+  .soft-skills-box {
+    width: 80%;
+    padding: 40px 30px;
+    
+  }
+}
+
 @media (max-width: 600px) {
   .hard-skills-box {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+  
+  .progress-container {
+    width: 100px;
+    height: 100px;
+  }
 
+  .skill-item img {
+    width: 35px;
+    height: 35px;
+  }
+}

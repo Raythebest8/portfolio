@@ -126,7 +126,7 @@
 
   /* 2. On retire les marges de la page web pour utiliser toute la feuille */
   .cv-page {
-    padding: 0 !important;
+    padding: 25px !important;
     background: white !important;
     display: block !important; /* On libère le centrage flex pour laisser le document couler normalement */
   }

@@ -69,7 +69,6 @@ function App() {
                   </div>
 
                   <div class="skills-wrapper">
-
                     <div class="hard-skills-box">
                       <div class="skill-item">
                         <div class="progress-container">
@@ -78,7 +77,7 @@ function App() {
                             <circle class="progress-bar html" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-                          <span class="skill-percent">95%</span>
+                          <span class="skill-percent">90%</span>
                         </div>
                         <p>HTML5</p>
                       </div>
@@ -90,7 +89,7 @@ function App() {
                             <circle class="progress-bar css" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-                          <span class="skill-percent">90%</span>
+                          <span class="skill-percent">70%</span>
                         </div>
                         <p>CSS3</p>
                       </div>
@@ -102,7 +101,7 @@ function App() {
                             <circle class="progress-bar js" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
-                          <span class="skill-percent">85%</span>
+                          <span class="skill-percent">50%</span>
                         </div>
                         <p>JavaScript</p>
                       </div>
@@ -114,7 +113,7 @@ function App() {
                             <circle class="progress-bar react" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-                          <span class="skill-percent">80%</span>
+                          <span class="skill-percent">60%</span>
                         </div>
                         <p>React</p>
                       </div>
@@ -126,7 +125,7 @@ function App() {
                             <circle class="progress-bar laravel" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
-                          <span class="skill-percent">75%</span>
+                          <span class="skill-percent">70%</span>
                         </div>
                         <p>Laravel</p>
                       </div>
@@ -138,7 +137,7 @@ function App() {
                             <circle class="progress-bar wordpress" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
-                          <span class="skill-percent">90%</span>
+                          <span class="skill-percent">80%</span>
                         </div>
                         <p>WordPress</p>
                       </div>
@@ -150,7 +149,7 @@ function App() {
                             <circle class="progress-bar php" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
-                          <span class="skill-percent">80%</span>
+                          <span class="skill-percent">70%</span>
                         </div>
                         <p>PHP</p>
                       </div>
@@ -162,7 +161,7 @@ function App() {
                             <circle class="progress-bar mysql" cx="50" cy="50" r="45"></circle>
                           </svg>
                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-                          <span class="skill-percent">85%</span>
+                          <span class="skill-percent">80%</span>
                         </div>
                         <p>MySQL</p>
                       </div>
