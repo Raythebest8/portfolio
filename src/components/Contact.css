@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   margin-top: auto;
+  margin-bottom: 15px;
 }
 
 .contact-container {
@@ -224,6 +225,7 @@
 @media (max-width: 1024px) {
   .contact-section {
     padding: 80px 5%;
+    margin-bottom: 15px;
   }
 
   .contact-container {

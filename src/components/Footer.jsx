@@ -15,7 +15,7 @@ const Footer = () => {
 
       <div className="footer-right">
         <div className="tech-stack-info">
-          <span>React 18.2</span>
+          <span>Ray the best</span>
           <div className="footer-separator"></div>
           <span>Lomé, TG</span>
         </div>

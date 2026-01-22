@@ -61,7 +61,7 @@ const Hero = () => {
 
         {/* L'image qui s'adapte aux deux styles */}
         <img
-          src="./assets/images/one-piece-anime-japanese-skull-hat-straw-hat-pirate-luffy-st.webp"
+          src="./assets/images/rayprortrait.jpg"
           alt="RayDev Profile"
           className="main-profile-img"
         />

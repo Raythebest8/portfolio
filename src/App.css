@@ -187,6 +187,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -50px;
 }
 
 .skills-header {
@@ -364,6 +365,7 @@ html {
 @media (max-width: 950px) {
   .skills-section {
     padding: 80px 5%;
+    margin-top: -50px;
   }
 
   .skills-wrapper {

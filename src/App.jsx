@@ -29,7 +29,7 @@ function App() {
                   <div className="about-main-container">
                     <div className="about-visual-box">
                       <div className="about-image-wrapper">
-                        <img src="./assets/images/Roronoa-Zoro-Wanted-Poster-7-scaled.webp" alt="RayDev Portrait" className="about-profile-img" />
+                        <img src="./assets/images/raythebest.jpg" alt="RayDev Portrait" className="about-profile-img" />
                         <div className="about-experience-badge">
                           <span className="about-badge-number">+1</span>
                           <span className="about-badge-text">An d'Expérience</span>
@@ -55,6 +55,7 @@ function App() {
                         <div className="about-info-card about-glass-effect">
                           <img src="./assets/images/diplome.png" alt="Icon" className="about-card-icon" />
                           <h3>Formation</h3>
+                          <p>Bac+2 en Référent Digital et Développement web</p>
                           <p>Licence Informatique et Économie en cours</p>
                         </div>
                       </div>
