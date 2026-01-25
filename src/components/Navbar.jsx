@@ -78,9 +78,9 @@ const Navbar = () => {
         </ul>
 
         <div className="nav-controls">
-          {/* <button className="theme-toggle" onClick={toggleTheme}>
+          <button className="theme-toggle" onClick={toggleTheme}>
             {isDark ? '☀️' : '🌙'}
-          </button> */}
+          </button>
           <button className="menu-toggle" onClick={() => setShowMenu(!showMenu)}>
             {showMenu ? '✕' : '☰'}
           </button>

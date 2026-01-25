@@ -1,7 +1,7 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs, FaLaravel } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs, FaLaravel, FaInstagram } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -22,14 +22,14 @@ const Hero = () => {
         </h3>
 
         <p className="hero-description">
-          Je conçois des expériences numériques modernes, fluides et centrées sur l'utilisateur.
-          Passionné par le code propre et le design innovant.
+          je suis développeur fullstack en pleine évolution, passionné par l'écriture de code maintenable et élégant. 
+          J'excelle dans la création d'expériences numériques modernes, intuitives et centrées sur l'utilisateur.
         </p>
 
         <div className="hero-socials">
-          <a href="#" className="social-icon"><FaGithub /></a>
+          <a href="https://github.com/RayTheBest8" className="social-icon"><FaGithub /></a>
           <a href="#" className="social-icon"><FaLinkedin /></a>
-          <a href="#" className="social-icon"><FaTwitter /></a>
+          <a href="#" className="social-icon"><FaInstagram /></a>
         </div>
 
         <div className="hero-btns">

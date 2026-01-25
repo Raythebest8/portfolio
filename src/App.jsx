@@ -43,8 +43,8 @@ function App() {
                         <h2 className="about-main-title">À Propos De <span>Moi</span></h2>
                       </div>
                       <p className="about-main-description">
-                        Passionné par la synergie entre la <strong>technologie</strong> et l'<strong>analyse économique</strong>,
-                        je poursuis actuellement un double cursus en Informatique et Économie.
+                        Je suis un développeur passionné, toujours curieux d'apprendre et de relever de nouveaux défis.
+                        Mon objectif est de créer des solutions numériques innovantes et efficaces, tout en mettant l'accent sur l'expérience utilisateur et la qualité du code.
                       </p>
                       <div className="about-cards-grid">
                         <div className="about-info-card about-glass-effect">
@@ -64,9 +64,9 @@ function App() {
                 </section>
 
                 {/* Section Compétences (Ici tu remettras ton code complet des skills) */}
-                <section id="competence" class="skills-section">
-                  <div class="skills-header">
-                    <h2 class="skills-main-title">Expertise <span>Technique</span></h2>
+                <section id="competence" className="skills-section">
+                  <div className="skills-header">
+                    <h2 className="skills-main-title">Mes <span>Compétences</span></h2>
                   </div>
 
                   <div class="skills-wrapper">
@@ -77,106 +77,106 @@ function App() {
                             <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
                             <circle class="progress-bar html" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-                          <span class="skill-percent">90%</span>
+                          <i className="fab fa-html5"></i>
+                          <span className="skill-percent">80%</span>
                         </div>
                         <p>HTML5</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar css" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar css" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-                          <span class="skill-percent">70%</span>
+                          <i className="fab fa-css3-alt"></i>
+                          <span className="skill-percent">70%</span>
                         </div>
                         <p>CSS3</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar js" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar js" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
-                          <span class="skill-percent">50%</span>
+                          <i className="fab fa-js-square"></i>
+                          <span className="skill-percent">60%</span>
                         </div>
                         <p>JavaScript</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar react" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar react" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-                          <span class="skill-percent">60%</span>
+                          <i className="fab fa-react"></i>
+                          <span className="skill-percent">60%</span>
                         </div>
                         <p>React</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar laravel" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar laravel" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
-                          <span class="skill-percent">70%</span>
+                          <i className="fab fa-laravel"></i>
+                          <span className="skill-percent">70%</span>
                         </div>
                         <p>Laravel</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar wordpress" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar wordpress" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
-                          <span class="skill-percent">80%</span>
+                          <i className="fab fa-wordpress"></i>
+                          <span className="skill-percent">80%</span>
                         </div>
                         <p>WordPress</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar php" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar php" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
-                          <span class="skill-percent">70%</span>
+                          <i className="fab fa-php"></i>
+                          <span className="skill-percent">70%</span>
                         </div>
                         <p>PHP</p>
                       </div>
 
-                      <div class="skill-item">
-                        <div class="progress-container">
-                          <svg class="progress-svg" viewBox="0 0 100 100">
-                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-bar mysql" cx="50" cy="50" r="45"></circle>
+                      <div className="skill-item">
+                        <div className="progress-container">
+                          <svg className="progress-svg" viewBox="0 0 100 100">
+                            <circle className="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle className="progress-bar mysql" cx="50" cy="50" r="45"></circle>
                           </svg>
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-                          <span class="skill-percent">80%</span>
+                          <i className="fab fa-mysql"></i>
+                          <span className="skill-percent">80%</span>
                         </div>
                         <p>MySQL</p>
                       </div>
 
                     </div>
 
-                    <div class="soft-skills-box">
-                      <h3 class="soft-title">Soft Skills</h3>
-                      <ul class="soft-list">
-                        <li><span class="bullet"></span> Résolution de problèmes complexes</li>
-                        <li><span class="bullet"></span> Esprit d'équipe & Collaboration</li>
-                        <li><span class="bullet"></span> Adaptabilité & Curiosité</li>
-                        <li><span class="bullet"></span> Communication & Empathie</li>
-                        <li><span class="bullet"></span> Analyse Stratégique (Économie)</li>
+                    <div className="soft-skills-box">
+                      <h3 className="soft-title">Soft Skills</h3>
+                      <ul className="soft-list">
+                        <li><span className="bullet"></span> Résolution de problèmes complexes</li>
+                        <li><span className="bullet"></span> Esprit d'équipe & Collaboration</li>
+                        <li><span className="bullet"></span> Adaptabilité & Curiosité</li>
+                        <li><span className="bullet"></span> Communication & Empathie</li>
+                        <li><span className="bullet"></span> Analyse Stratégique (Économie)</li>
                       </ul>
                     </div>
 
@@ -190,7 +190,7 @@ function App() {
                 </section>
 
                 <section id="contact">
-                  <h1 className="contact-titles">Contactez-Moi</h1>
+                  <h1 className="contact-titles">Contactez-<span>Moi</span></h1>
                   <Contact />
                 </section>
                 <Footer/>

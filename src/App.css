@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   padding: 0;
@@ -101,6 +99,7 @@ html {
 .about-main-description {
   font-size: 1.1rem;
   line-height: 1.8;
+  justify-content: center;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 40px;
 }
@@ -293,15 +292,38 @@ html {
 .skill-item:hover img { transform: scale(1.1) translateY(-5px); filter: grayscale(0%); }
 .skill-item:hover .skill-percent { opacity: 1; bottom: 18px; }
 
-/* Valeurs de progression */
-.skill-item:hover .progress-bar.html { stroke-dashoffset: 14; }   /* 95% */
-.skill-item:hover .progress-bar.css { stroke-dashoffset: 28; }    /* 90% */
-.skill-item:hover .progress-bar.js { stroke-dashoffset: 42; }     /* 85% */
-.skill-item:hover .progress-bar.react { stroke-dashoffset: 56; }  /* 80% */
-.skill-item:hover .progress-bar.laravel { stroke-dashoffset: 70; }/* 75% */
-.skill-item:hover .progress-bar.wordpress { stroke-dashoffset: 28; }
-.skill-item:hover .progress-bar.php { stroke-dashoffset: 56; }
-.skill-item:hover .progress-bar.mysql { stroke-dashoffset: 42; }
+/* Styles for skill-item progress bars */
+.skill-item:hover .progress-bar.html {
+  stroke-dashoffset: 40; /* 80% */
+}
+
+.skill-item:hover .progress-bar.css {
+  stroke-dashoffset: 80; /* 70% */
+}
+
+.skill-item:hover .progress-bar.js {
+  stroke-dashoffset: 120; /* 60% */
+}
+
+.skill-item:hover .progress-bar.react {
+  stroke-dashoffset: 120; /* 60% */
+}
+
+.skill-item:hover .progress-bar.laravel {
+  stroke-dashoffset: 80; /* 70% */
+}
+
+.skill-item:hover .progress-bar.wordpress {
+  stroke-dashoffset: 40; /* 80% */
+}
+
+.skill-item:hover .progress-bar.php {
+  stroke-dashoffset: 80; /* 70% */
+}
+
+.skill-item:hover .progress-bar.mysql {
+  stroke-dashoffset: 42; /* 70% */
+}
 
 /* --- SOFT SKILLS (Box Glassmorphism) --- */
 .soft-skills-box {
