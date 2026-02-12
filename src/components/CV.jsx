@@ -72,6 +72,17 @@ const CV = () => {
               <p> Cinéma & Animation</p>
               <p> Jeux de stratégie</p>
             </section>
+
+            <section className="sidebar-section"> 
+              <h3 className="section-title">Communauté</h3>
+              <p>Membre de la Communauté 10000 codeur</p>
+              <p>Membre de la Communauté Friends Of Code</p>
+            </section>
+
+            <section className="sidebar-section">
+              <h3 className="section-title">Références</h3>
+              <p>Disponibles sur demande.</p>
+            </section>
           </aside>
 
           {/* COLONNE DROITE */}
@@ -82,11 +93,11 @@ const CV = () => {
 
                 {/* 1. PROJET DÉVELOPPEMENT (SaaS / React) */}
                 <div className="exp-item">
-                  <h4>Développeur Web - Freelance (Dashboard SaaS)</h4>
-                  <span className="date">2024 - Présent</span>
+                  <h4>Développeur Web - Projet BTP</h4>
+                  <span className="date">2026</span>
                   <p>
-                    Conception d'une interface de gestion dynamique en <strong>React.js</strong>.
-                    Optimisation des performances front-end et consommation d'APIs REST pour l'affichage de statistiques en temps réel.
+                    Développement d'une interface utilisateur interactive et performante avec <strong>React.js</strong>,
+                    intégrant des tableaux de bord dynamiques et des visualisations de données en temps réel via des APIs REST.
                   </p>
                 </div>
 
@@ -102,21 +113,23 @@ const CV = () => {
 
                 {/* 3. PROJET CMS (WordPress / E-commerce) */}
                 <div className="exp-item">
-                  <h4>Expert CMS - Création de Plateformes E-commerce</h4>
-                  <span className="date">2023 - 2024</span>
+                  <h4>Développement de Plateformes E-commerce - Ayoubdecor</h4>
+                  <span className="date">3 mois</span>
                   <p>
-                    Déploiement de boutiques en ligne sous <strong>WordPress & WooCommerce</strong>.
-                    Personnalisation de thèmes (Elementor/Divi), optimisation SEO technique et configuration de passerelles de paiement locales.
+                    Réalisation de boutiques en ligne avec <strong>WordPress & WooCommerce</strong>,
+                    incluant la personnalisation avancée de thèmes (Elementor/Divi),
+                    l'optimisation technique pour le SEO, et l'intégration de solutions de paiement adaptées.
                   </p>
                 </div>
 
                 {/* 4. PROJET DESIGN (UX/UI) */}
                 <div className="exp-item">
-                  <h4>UI/UX Designer - Refonte d'Identité Numérique</h4>
-                  <span className="date">2023</span>
+                  <h4>UI/UX Designer - Projet Site d'Urgence</h4>
+                  <span className="date">2025</span>
                   <p>
-                    Conception de maquettes haute fidélité sous <strong>Figma</strong>.
-                    Création de wireframes, prototypage interactif et élaboration de chartes graphiques modernes centrées sur l'expérience utilisateur (User-First).
+                    Réalisation de maquettes haute fidélité avec <strong>Figma</strong>,
+                    création de wireframes détaillés, prototypage interactif, et développement de chartes graphiques modernes
+                    axées sur une expérience utilisateur optimale et intuitive.
                   </p>
                 </div>
 
@@ -136,8 +149,8 @@ const CV = () => {
                   <span className="date-edu">2023</span>
                 </div>
                 <div className="edu-item">
-                  <h4>Formation En referent digital et  Developement </h4>
-                  <p>Certification intensive en réferent digital et  développement web & mobile </p>
+                  <h4>Formation certifier Bac+2</h4>
+                  <p>Certification en réferent digital et développement web & mobile </p>
                   <span className="date-edu">Obtenu en 2025</span>
                 </div>
                 <div className="edu-item">
