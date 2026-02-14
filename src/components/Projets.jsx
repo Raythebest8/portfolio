@@ -14,7 +14,7 @@ const Projets = () => {
       category: "code", 
       tags: ["Laravel", "MySQL" ,"git" ,"boostrap", "Tailwins",],
       type: "Fil rouge",
-      url: "https://github.com/Raythebest8/MicroSass_By_Ray" 
+      url: "https://github.com/Raythebest8" 
     },
      {
       id: 7,
